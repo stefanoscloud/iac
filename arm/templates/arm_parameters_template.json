@@ -1,0 +1,20 @@
+
+/*
+  Azure ARM Template Parameters File
+
+  This file accompanies the main ARM template and provides values for the declared parameters.
+  Using a separate parameters file enhances the reusability of the ARM template, as you can deploy the same template with different parameter values.
+
+  To use this file, provide its path when deploying the main ARM template.
+*/
+
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "East US"
+    }
+    // Provide values for other parameters as needed
+  }
+}
