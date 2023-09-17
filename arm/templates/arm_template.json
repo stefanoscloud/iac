@@ -1,0 +1,56 @@
+
+/*
+  Azure ARM Template
+
+  This file is an Azure Resource Manager (ARM) template. ARM templates are JSON files that define the resources you want to deploy to Azure.
+  To deploy this template, you'd typically use the Azure CLI, PowerShell, or the Azure Portal.
+
+  For example, using Azure CLI, you'd deploy it with:
+  az deployment group create --resource-group <YourResourceGroupName> --template-file <PathToThisTemplateFile> --parameters <PathToParametersFile>
+
+  The template has several sections:
+  - parameters: Input values you can pass to customize deployments.
+  - variables: Reusable values within this template.
+  - resources: Azure resources to be provisioned.
+  - outputs: Values returned after deployment, useful for further automation tasks or information retrieval.
+*/
+
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "type": "string",
+      "defaultValue": "East US",
+      "metadata": {
+        "description": "Location for all resources."
+      }
+    }
+    // Add other parameters as needed
+  },
+  "variables": {
+    "exampleVariable": "This is an example variable"
+    // Add other variables as needed
+  },
+  "resources": [
+    // Define your Azure resources here. For example, a storage account might look like this:
+    // {
+    //   "type": "Microsoft.Storage/storageAccounts",
+    //   "apiVersion": "2019-06-01",
+    //   "name": "examplestoracc",
+    //   "location": "[parameters('location')]",
+    //   "sku": {
+    //     "name": "Standard_LRS"
+    //   },
+    //   "kind": "StorageV2",
+    //   "properties": {}
+    // }
+  ],
+  "outputs": {
+    "exampleOutput": {
+      "type": "string",
+      "value": "[variables('exampleVariable')]"
+    }
+    // Define other outputs as needed
+  }
+}
