@@ -1,0 +1,14 @@
+
+name: azure-python-project
+runtime:
+    name: python
+    options:
+        virtualenv: venv
+description: A detailed Azure Python Pulumi program template
+config:
+    azure:location:
+        description: The Azure region to deploy into
+        default: West US
+    azure:environment:
+        description: The Azure environment to run against. Defaults to public.
+        default: public
